@@ -1,0 +1,32 @@
+::-webkit-scrollbar {
+    width: 12px;
+    max-height: 10%; 
+    height: 10%;
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(215, 215, 215); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bebebe; 
+  
+  }
+
+
+@media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  }
