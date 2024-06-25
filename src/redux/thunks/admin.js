@@ -11,7 +11,7 @@ const adminLogin=createAsyncThunk("admin/login",async(secretKey)=>{
             }
         }
     
-        const {data}=await axios.post(`/api/v1/admin/verify`,{secretKey},config
+        const {data}=await axios.post(`${import.meta.env.VITE_SERVER}/api/v1/admin/verify`,{secretKey},config
         )
         return data.message
     } catch (error) {
@@ -21,7 +21,7 @@ const adminLogin=createAsyncThunk("admin/login",async(secretKey)=>{
 })
 const getAdmin=createAsyncThunk("admin/getAdmin",async()=>{
     try {
-        const {data}=await axios.get(`/api/v1/admin/`,{withCredentials:true,}
+        const {data}=await axios.get(`${import.meta.env.VITE_SERVER}/api/v1/admin/`,{withCredentials:true,}
         )
         return data.admin
     } catch (error) {
@@ -31,7 +31,7 @@ const getAdmin=createAsyncThunk("admin/getAdmin",async()=>{
 })
 const adminLogout=createAsyncThunk("admin/adminLogout",async()=>{
     try {
-        const {data}=await axios.get(`/api/v1/admin/logout`,{withCredentials:true,}
+        const {data}=await axios.get(`${import.meta.env.VITE_SERVER}/api/v1/admin/logout`,{withCredentials:true,}
         )
         return data.message
     } catch (error) {

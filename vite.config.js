@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/v1': {
-        target: 'https://apnachat-backend.onrender.com/',
+        target: 'http://localhost:3000/',
         changeOrigin: true,
       },
     },

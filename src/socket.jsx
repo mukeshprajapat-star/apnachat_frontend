@@ -5,7 +5,7 @@ const SocketContext=createContext();
 const getSocket=() =>useContext(SocketContext)
 const SocketProvider=({children})=>{
     const socket =useMemo(
-        ()=> io('https://apnachat-backend.onrender.com/',{withCredentials:true}) ,[]);
+        ()=> io(import.meta.env.VITE_SERVER,{withCredentials:true}) ,[]);
 
     return (
         <SocketContext.Provider value={socket}>

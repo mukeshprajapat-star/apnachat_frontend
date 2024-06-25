@@ -64,7 +64,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        `/api/v1/user/login`,
+        `${import.meta.env.VITE_SERVER}/api/v1/user/login`,
         {
           username: username.value,
           password: password.value,
@@ -106,7 +106,7 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        `/api/v1/user/new`,
+        `${import.meta.env.VITE_SERVER}/api/v1/user/new`,
         formData,
         config
       );

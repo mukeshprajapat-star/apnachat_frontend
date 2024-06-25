@@ -41,7 +41,7 @@ const Header = () => {
     }
     const LogoutHandler=async ()=>{
       try {
-       const {data}= axios.get(`/api/v1/user/logout`,{withCredentials:true})
+       const {data}= axios.get(`${import.meta.env.VITE_SERVER}/api/v1/user/logout`,{withCredentials:true})
         dispatch(userNotExists())
         toast.success(data.message);
         
