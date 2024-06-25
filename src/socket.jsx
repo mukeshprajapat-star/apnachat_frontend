@@ -5,7 +5,7 @@ const SocketContext=createContext();
 const getSocket=() =>useContext(SocketContext)
 const SocketProvider=({children})=>{
     const socket =useMemo(
-        ()=> io("http://localhost:3000",{withCredentials:true}) ,[]);
+        ()=> io('https://apnachat-backend.onrender.com/',{withCredentials:true}) ,[]);
 
     return (
         <SocketContext.Provider value={socket}>
