@@ -19,7 +19,7 @@ import {
 import { useError } from "../../hooks/hooks";
 
 const Dashboard = () => {
-  const {loading,data,error}=useFetchData(`/api/v1/admin/stats`,"dashboard-stats");
+  const {loading,data,error}=useFetchData(`${import.meta.env.VITE_SERVER}/api/v1/admin/stats`,"dashboard-stats");
   const {stats}=data || {}
   useError([{isError:error,error:error}])
   const Appbar = (

@@ -53,7 +53,7 @@ const columns=[
 }
 ]
 const UserManagement = () => {
-    const {loading,data,error}=useFetchData(`/api/v1/admin/users`,"dashboard-users");
+    const {loading,data,error}=useFetchData(`${import.meta.env.VITE_SERVER}/api/v1/admin/users`,"dashboard-users");
     const {stats}=data || {}
     useError([{isError:error,error:error}])
     const [rows ,setRows]=useState([]);

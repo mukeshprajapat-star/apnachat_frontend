@@ -76,7 +76,7 @@ return attachments?.length>0 ? attachments.map((i)=>attachments.map((i)=>{
 
 const MessageManagement = () => {
     
-  const {loading,data,error}=useFetchData(`/api/v1/admin/messages`,"dashboard-messages");
+  const {loading,data,error}=useFetchData(`${import.meta.env.VITE_SERVER}/api/v1/admin/messages`,"dashboard-messages");
   const {stats}=data || {}
 
   useError([{isError:error,error:error}])
